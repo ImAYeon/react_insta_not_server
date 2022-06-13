@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
 import { Button, Container, Modal, Spinner } from "reactstrap";
+import { IMG_PATH } from "../../http/CustomAxios";
 import {
   deleteFollow,
   insertFollowing,
@@ -55,7 +56,7 @@ const Posts = ({ postState, posts }) => {
             <img
               className="PostsImg" //
               key={post.id}
-              src={post.img}
+              src={`${IMG_PATH}${post.img}`}
               alt={post.content}
             ></img>
           </div>
